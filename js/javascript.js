@@ -16,10 +16,22 @@ document.addEventListener("DOMContentLoaded", function() {
     }
 });
 
+
+
+
 const resizeBtn = document.querySelector(".btn");
 
-resizeBtn.addEventListener('click', () => {
-    prompt("Enter a number between 1 to 64: ");
-});
+resizeBtn.addEventListener('click', resizeGrid)
 
 
+function resizeGrid() {
+    // This Function adjusts the number of sqaures in grid based on input from user
+    let resizeValue = prompt("Enter a number between 1 to 100: ");
+    resizeValue = Number(resizeValue);
+    
+    if (resizeValue >= 1 && resizeValue <=100) {
+        alert("Work!");
+    } else {
+        alert("ERROR!");
+    }
+}
